@@ -1,0 +1,13 @@
+{
+	"name": "day-1",
+	"version": "1.0.0",
+	"description": "DAY 1 of AOC 2021",
+	"main": "part1.js",
+	"author": "vishnup95",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [],
+	"license": "ISC",
+  "type": "module"
+}
