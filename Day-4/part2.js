@@ -72,7 +72,6 @@ function checkVerticalBingo(numToMark) {
 			if (bingo) {
 				bingoBoards.splice(i, 1);
 				if (bingoBoards.length === 0) {
-					// console.log(bingoBoard);
 					bingoSuccess(bingoBoard, numToMark);
 					process.exit();
 				}

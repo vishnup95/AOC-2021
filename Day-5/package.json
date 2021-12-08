@@ -1,0 +1,13 @@
+{
+	"name": "day-5",
+	"version": "1.0.0",
+	"description": "AOC day 5 2021",
+	"main": "index.js",
+	"type": "module",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [],
+	"author": "vishnup95",
+	"license": "ISC"
+}
