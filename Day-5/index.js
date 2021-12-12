@@ -1,5 +1,4 @@
 import * as fs from 'fs/promises';
-import { type } from 'os';
 
 const input = await fs.readFile('input.txt', 'utf8');
 let data = input.split('\n').filter((e) => e !== '');
