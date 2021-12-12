@@ -30,5 +30,8 @@ function calculateLanternFishCount(days) {
 }
 
 //part1
-const totalPufferFishPart1 = calculateLanternFishCount(256);
+const totalPufferFishPart1 = calculateLanternFishCount(80);
 console.log(totalPufferFishPart1);
+//part2
+const totalPufferFishPart2 = calculateLanternFishCount(256);
+console.log(totalPufferFishPart2);
