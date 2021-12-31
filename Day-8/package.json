@@ -1,0 +1,13 @@
+{
+	"name": "day-8",
+	"version": "1.0.0",
+	"description": "--- Day 8: Seven Segment Search ---",
+	"main": "index.js",
+	"type": "module",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [],
+	"author": "vishnup95",
+	"license": "ISC"
+}
