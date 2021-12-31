@@ -1,0 +1,13 @@
+{
+  "name": "day-9",
+  "version": "1.0.0",
+  "description": "--- Day 9: Smoke Basin --- ",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "vishnup95",
+  "license": "ISC"
+}
