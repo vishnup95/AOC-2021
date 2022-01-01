@@ -76,7 +76,6 @@ function getAdjacentElement(depthData, i, j) {
 	};
 }
 
-// let count = 0;
 let traversedPoints;
 function startBackTracking(adjacentData, nums, depthData) {
 	if (
