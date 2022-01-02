@@ -1,15 +1,9 @@
 import * as fs from 'fs/promises';
 
 let input = await fs.readFile('./input.txt', 'utf-8');
-// let input = `11111
-// 19991
-// 19191
-// 19991
-// 11111`;
-
 input = input.split('\n').map((e) => e.split('').map(Number));
 
-// look at generator for neighbour data
+// reused this from the Day 10 I believe! Should have just gone with a loop Brr..
 function getNeighbours(depthData, i, j) {
 	let adjacentPoints = [];
 	if (i === 0 && j === 0) {
@@ -172,7 +166,7 @@ function lookUpNeighboursAndGlow(dumbFishData, i, j) {
 	glowedPoints.push({ i, j });
 	const neighbours = getNeighbours(dumbFishData, i, j);
 	for (const neighbour of neighbours.adjacentPoints) {
-		const { i, j, number } = neighbour;
+		const { i, j } = neighbour;
 		if (!glowedPoints.some((e) => e.i === i && e.j === j)) {
 			dumbFishData[i][j]++;
 		}
