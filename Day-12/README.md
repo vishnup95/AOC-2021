@@ -8,7 +8,6 @@ I struggled with this one!
                                                        \    /
                                                          end
 
-
 then find the adjacent nodes or paths using filter. We also remove all array elements that have 'start' in them. Then go to the next node and find all the connections we can have using filter, includes and flatMaps. We go through each connection and immeadiately check for lowercase. We also have an array called tempPath that stores the nodes we have waked through.
 
 //for part- 1
