@@ -1,5 +1,4 @@
 import * as fs from 'fs/promises';
-import path from 'path';
 
 let input = await fs.readFile('./input.txt', 'utf-8');
 
@@ -11,19 +10,32 @@ let tempPath = [];
 const isLowerCase = (str) =>
 	str == str.toLowerCase() && str != str.toUpperCase();
 
-const tempPathCondition = (t) => {
-	console.log(t);
-	return true;
+// i hate this. Why am i so dumb?
+const tempPathCondition = (p, c) => {
+	let restFiltered = p.filter(
+		(e) => isLowerCase(e) && e !== 'start' && e !== c
+	);
+	let cFiltered = p.filter((e) => e === c);
+	if (cFiltered.length === 2) {
+		return true;
+	}
+	if (cFiltered.length < 2) {
+		let setTest = new Set(restFiltered);
+		if (setTest.size < restFiltered.length) {
+			//then something is duplicated already we should return true
+			return true;
+		} else {
+			return false;
+		}
+	}
 };
 
 const getConnections = (paths, name) => {
 	tempPath.push(name);
 	if (name === 'end') {
 		traversedPaths.add([...tempPath]);
-		// console.log({ traversedPaths });
-		// tempPath.pop();
-		// return;
 	}
+
 	let connections = paths
 		.filter((e) => e.includes(name))
 		.map((e) => e.filter((s) => s !== name))
@@ -31,16 +43,12 @@ const getConnections = (paths, name) => {
 	if (name === 'start') {
 		paths = paths.filter((e) => !e.includes('start'));
 	}
-	// console.log({ tempPath });
-	// console.log({ name });
-	// console.log({ connections });
-	// console.log('%%%%%%');
 
 	for (const connection of connections) {
 		if (
 			tempPath.includes(connection) &&
 			isLowerCase(connection) &&
-			tempPathCondition(tempPath)
+			tempPathCondition(tempPath, connection)
 		)
 			continue;
 		if (name === 'end') {
